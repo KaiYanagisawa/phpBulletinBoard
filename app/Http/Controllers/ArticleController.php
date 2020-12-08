@@ -15,6 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         $message='Welcome to my BBS';
+        $articles=Article::all();
         return view('index',['message'=>$message]);
     }
 
