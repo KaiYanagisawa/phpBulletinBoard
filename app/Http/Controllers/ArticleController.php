@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $message='Welcome to my BBS';
+        return view('index',['message'=>$message]);
     }
 
     /**
