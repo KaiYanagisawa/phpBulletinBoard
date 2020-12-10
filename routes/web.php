@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/articles','ArticleController@index')->name('article.list');
-Route::get('/article/{id}','ArticleController@show')->name('article.show');
 Route::get('/article/new','ArticleController@create')->name('article.new');
+Route::get('/article/{id}','ArticleController@show')->name('article.show');

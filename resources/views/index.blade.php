@@ -16,5 +16,8 @@
                 </a>
             </p>
         @endforeach
+        <div>
+            <a href={{route('article.new')}}>新規投稿</a>
+        </div>
     </body>
 </html>
