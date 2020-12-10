@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/articles');
 });
 
 Route::get('/articles','ArticleController@index')->name('article.list');
