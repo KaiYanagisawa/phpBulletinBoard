@@ -16,7 +16,7 @@ class ArticleController extends Controller
     {
         $message='Welcome to my BBS';
         $articles=Article::all();
-        return view('index',['message'=>$message]);
+        return view('index',['message'=>$message, 'articles'=>$articles]);
     }
 
     /**
@@ -46,9 +46,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Request $request, $id, Article $article)
     {
-        //
+        $message = 'This is your article' . $id;
+        $article = Article::find($id);
+        return view('show',['message'=>$message,'article'=>$article]);
     }
 
     /**
