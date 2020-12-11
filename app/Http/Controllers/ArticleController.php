@@ -14,9 +14,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $message='Welcome to my BBS';
-        $articles=Article::all();
-        return view('index',['message'=>$message, 'articles'=>$articles]);
+        $message = 'Welcome to my BBS';
+        $articles = Article::all();
+        return view('index', ['message' => $message, 'articles' => $articles]);
     }
 
     /**
@@ -28,9 +28,9 @@ class ArticleController extends Controller
     {
         $article = new Article();
 
-        $article -> content = 'Hello BBS';
-        $article -> user_name = 'paiza';
-        $article -> save();
+        $article->content = 'Hello BBS';
+        $article->user_name = 'paiza';
+        $article->save();
         return redirect('/articles');
     }
 
@@ -55,7 +55,7 @@ class ArticleController extends Controller
     {
         $message = 'This is your article' . $id;
         $article = Article::find($id);
-        return view('show',['message'=>$message,'article'=>$article]);
+        return view('show', ['message' => $message, 'article' => $article]);
     }
 
     /**
@@ -89,8 +89,8 @@ class ArticleController extends Controller
      */
     public function destroy(Request $request, $id, Article $article)
     {
-        $article=$Article::find($id);
-        $article=delete();
+        $article = $Article::find($id);
+        $article = delete();
         return redirect('/articles');
     }
 }
