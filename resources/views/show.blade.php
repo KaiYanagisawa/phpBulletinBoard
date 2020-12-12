@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
+@extends('layout')
 
-<head>
-    <meta charset='utf-8'>
-    <title>paiza bbs</title>
-    <style>
-        body {
-            padding: 10px;
-        }
+@section('content')
 
-    </style>
-</head>
 
-<body>
     <h1>paiza bbs</h1>
     <p>{{ $message }}</p>
     <p>{{ $article->content }}</p>
@@ -22,9 +12,8 @@
     </p>
     <div>
         {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
-            {{ Form::submit('削除') }}
+        {{ Form::submit('削除') }}
         {{ Form::close() }}
     </div>
-</body>
 
-</html>
+@endsection

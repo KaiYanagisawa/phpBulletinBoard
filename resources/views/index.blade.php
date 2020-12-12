@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
+@extends('layout')
 
-<head>
-    <meta charset='utf-8'>
-    <title>paiza bbs</title>
-    <style>
-        body {
-            padding: 10px;
-        }
+@section('content')
 
-    </style>
-</head>
-
-<body>
     <h1>paiza bbs</h1>
     <p>{{ $message }}</p>
     @foreach ($articles as $article)
@@ -26,6 +15,5 @@
     <div>
         <a href={{ route('article.new') }}>新規投稿</a>
     </div>
-</body>
 
-</html>
+@endsection
