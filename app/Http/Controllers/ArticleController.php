@@ -12,10 +12,16 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $message = 'Welcome to my BBS';
-        $articles = Article::all();
+        if($request->filled('keyword')){
+            $keyword=$request->input('keyword');
+            $message='Welcome to BBS: '.$keyword;
+            $articles=Article::where('content','like','%'.$keyword.'%')->get();
+        }else {
+            $message='Welcome to BBS';
+            $articles = Article::all();
+        }
         return view('index', ['message' => $message, 'articles' => $articles]);
     }
 
@@ -64,9 +70,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Request $request, $id,Article $article)
     {
-        //
+        $message = 'This is your article' . $id;
+        $article = Article::find($id);
+        return view('show', ['message' => $message, 'article' => $article]);
     }
 
     /**
