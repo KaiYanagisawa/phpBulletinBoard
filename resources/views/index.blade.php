@@ -20,7 +20,7 @@
     </table>
 
     <div>
-        <a href={{ route('article.new') }}>新規投稿</a>
+        <a href={{ route('article.new') }} class="btn btn-outline-primary">新規投稿</a>
     </div>
 
 @endsection
