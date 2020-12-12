@@ -22,7 +22,7 @@
     </p>
     <div>
         {{ Form::open(['method' => 'delete', 'route' => ['article.delete', $article->id]]) }}
-        {{ Form::submit('削除') }}
+            {{ Form::submit('削除') }}
         {{ Form::close() }}
     </div>
 </body>
