@@ -5,13 +5,13 @@
     <h1>paiza bbs</h1>
     <p>{{ $message }}</p>
     @include('search')
-    
+
     <table class="table table-striped table-hover">
         @foreach ($articles as $article)
             <tr>
                 <td>
                     <a href="{{ route('article.show', ['id' => $article->id]) }}">
-                        {{ $article->content }},
+                        {{ $article->content }}
                     </a>
                 </td>
                 <td>
