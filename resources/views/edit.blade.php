@@ -3,7 +3,7 @@
 @section('content')
     <h1>paiza bbs</h1>
     <p>{{ $message }}</p>
-    {{ Form::model('article', ['route' => ['article.update', $article->id]]) }}
+    {{ Form::model($article, ['route' => ['article.update', $article->id]]) }}
     <div class="form-group">
         {{ Form::label('content', 'Content:') }}
         {{ Form::text('content', null) }}
