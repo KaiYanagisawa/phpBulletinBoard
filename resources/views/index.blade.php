@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>paiza bbs</h1>
+    <h1>bbs</h1>
     <p>{{ $message }}</p>
     @include('search')
 
@@ -20,9 +20,9 @@
             </tr>
         @endforeach
     </table>
-
-    <div>
-        <a href={{ route('article.new') }} class="btn btn-outline-primary">新規投稿</a>
-    </div>
-
+    @auth
+        <div>
+            <a href={{ route('article.new') }} class="btn btn-outline-primary">新規投稿</a>
+        </div>
+    @endauth
 @endsection

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <h1>paiza bbs</h1>
+    <h1>bbs</h1>
     <p>{{ $message }}</p>
     {{ Form::open(['route' => 'article.store']) }}
     <div class="form-group">

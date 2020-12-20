@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>paiza bbs</title>
+    <title>bbs</title>
     @include('style-sheet')
 </head>
 
