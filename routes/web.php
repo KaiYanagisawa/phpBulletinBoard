@@ -27,3 +27,5 @@ Route::delete('/article/{id}', 'ArticleController@destroy')->name('article.delet
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+aaaaaaaaaa
